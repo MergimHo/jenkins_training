@@ -1,4 +1,4 @@
-@Library('https://github.com/MergimHo/shared-lib-jenkins') _
+@Library('https://github.com/MergimHo/shared-lib-jenkins.git') _
 
 pipeline {
     agent any
