@@ -1,18 +1,14 @@
+@Library('https://github.com/MergimHo/shared-lib-jenkins')
+
 pipeline {
     agent any
     
     stages {
-        stage('verify Branch') {
+        stage('Call Library Hello-World Function') {
             steps {
-                echo "${GIT_BRANCH}"
-                sh script: 'docker images -a'
-                sh script: '''
-                cd azure-vote/
-                docker images -a
-                docker build -t jenkins-pipeline .
-                docker images -a
-                cd ..
-                '''
+                script {
+                    helloWorld()
+                }
             }
         }
     }
