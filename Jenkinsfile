@@ -1,8 +1,7 @@
-@Library('https://github.com/MergimHo/shared-lib-jenkins')
+@Library('https://github.com/MergimHo/shared-lib-jenkins') _
 
 pipeline {
     agent any
-    
     stages {
         stage('Call Library Hello-World Function') {
             steps {
